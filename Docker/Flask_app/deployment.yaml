@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: Demo-pod
+  labels:
+    name: demo-pod
+spec:
+  containers:
+    - name: Demo-container
+      image: ngnix
+
+

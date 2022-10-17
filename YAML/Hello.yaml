@@ -1,0 +1,20 @@
+"Hello" : "Welcome to the future. of ML and AI."
+
+#list
+- shubham
+- sirsat
+- gopal
+- 
+
+---
+cities:
+  - Akola
+  - Mumbai
+  - Hyderabad
+  - Delhi
+---
+cities: ["New Delhi","Mumbai","Hyderabad"]
+---
+{fruit: "Mango", colour: "Blue", sport: "Cricket" }
+
+...

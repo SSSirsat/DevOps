@@ -1,0 +1,101 @@
+# List
+student: !!seq
+ - Roll_no
+ - name
+ - Marks
+
+ # some of keys of sequence may be empty
+ # sparse seq
+ sparse seq:
+  - name
+  - age
+  - 
+  - Null
+  - something
+
+# Nested Sequences
+
+-
+ - mango
+ - apple
+ - banana
+-
+ - name
+ - age
+ - roll no
+
+ # key: value pair are called map
+ !!map
+
+ # Nested mapping : map within a map
+ name: shubham sirsat
+ college:
+  branch: mechanical
+  rollno: 4365
+
+#is same as 
+name: shubham sirsat
+college: {branch: mechanical, rollno: 4365}
+
+# Pairs: key may have duplicate values
+!!pairs
+
+Pairs_ex: !!pairs
+  - job: teacher
+  - job: student
+#same as this
+Pairs_ex: !!pairs [job: teacher, job: student]
+# this will be an array of hashtable
+
+# !!set will allow you to have a unique value
+names: !!set
+ ? shubh
+ ? gopal
+ ? apoorv
+
+
+# Dictonary --> !!omap
+student: !!omap
+  - Shubham:
+     name: shubham suryakant sirsat
+     age: 52
+     height: 185
+  - Kanchana:
+     name: kanchana return
+     age: 45
+     height: 44
+
+
+# Reusing some properties using anchors
+likings: &likes
+ fav fruit: mango
+ not like fruit: chiku
+
+person1:
+ name : shubham sirsat
+ <<: *likes 
+
+person2:
+ name : shubham sirsat
+ <<: *likes
+ fav fruit: banana
+
+# This will look like 
+# {
+# 	"likings": {
+# 		"fav fruit": "mango",
+# 		"not like fruit": "chiku"
+# 	},
+# 	"person1": {
+# 		"name": "shubham sirsat",
+# 		"fav fruit": "mango",
+# 		"not like fruit": "chiku"
+# 	},
+# 	"person2": {
+# 		"name": "shubham sirsat",
+# 		"fav fruit": "banana",
+# 		"not like fruit": "chiku"
+# 	}
+# }
+
+

@@ -1,0 +1,165 @@
+Linux commands practice the Linux operating system
+
+-------------------------------------------------------------------------
+Check the present working directory of current cursor >>>>>>>----
+shubham@BRNHYD0122L014:~$ pwd
+/home/shubham
+
+-----------------------------------
+	#Checking the list of items,or folder in presrent folder 
+shubham@BRNHYD0122L014:~$ ls
+desktop
+
+---------------------------------------------
+	#change the current working directory use "cd" command
+shubham@BRNHYD0122L014:~$ cd desktop
+
+-----------------------------------------------
+	#move back to derectory use "cd .." command
+shubham@BRNHYD0122L014:~/desktop$ cd ..
+
+-----------------------------------------------
+	#what to go to root directory use "cd /" command
+shubham@BRNHYD0122L014:~$ cd /
+------------------------------------
+	#Listing the all present directory and files in root directory, you can see the home directory also there.
+shubham@BRNHYD0122L014:/$ ls
+bin   dev  home  lib    lib64   media  opt   root  sbin  srv  tmp  var
+boot  etc  init  lib32  libx32  mnt    proc  run   snap  sys  usr
+-----------------------------------
+shubham@BRNHYD0122L014:/$ cd home
+-----------------------------------
+shubham@BRNHYD0122L014:/home$ ls
+shubham
+------------------------------------
+shubham@BRNHYD0122L014:/home$ pwd
+/home
+shubham@BRNHYD0122L014:/home$ cd shubham
+-------------------------------
+shubham@BRNHYD0122L014:~$ ls
+desktop
+shubham@BRNHYD0122L014:~$ cd ..
+shubham@BRNHYD0122L014:/home$ ls
+shubham
+shubham@BRNHYD0122L014:/home$ cd shubham
+
+--------------------------------------------------------------------
+	#make the folder/directory in current folder use "mkdir <folder_name>"
+shubham@BRNHYD0122L014:~$ mkdir documents
+
+---------------------------------
+shubham@BRNHYD0122L014:~$ ls
+desktop  documents
+shubham@BRNHYD0122L014:~$ cd documents
+
+-----------------------------------------------------
+	#creating text file in directory use "cat >{file_name.format} write something in in file " 
+	for ending use "CTRL+D" for closing the command and file .
+shubham@BRNHYD0122L014:~/documents$ cat >foo.txt
+
+,
+ls
+
+
+
+shubham is bad boy and hulkat kutra sala
+------------------------------------------------------------>>
+shubham@BRNHYD0122L014:~/documents$ ls
+foo.txt
+-------------------------------------------------
+	#Read the file that we just created by us. use "cat <file_name>"
+shubham@BRNHYD0122L014:~/documents$ cat foo.txt
+
+,
+ls
+
+
+
+shubham is bad boy and hulkat kutra sala
+----------------------------------------------------
+shubham@BRNHYD0122L014:~/documents$ ls
+foo.txt
+shubham@BRNHYD0122L014:~/documents$ mkdir lord
+shubham@BRNHYD0122L014:~/documents$ ls
+foo.txt  lord
+shubham@BRNHYD0122L014:~/documents$ mkdir buddha
+shubham@BRNHYD0122L014:~/documents$ mkdir krishna
+shubham@BRNHYD0122L014:~/documents$ mkdir ram
+shubham@BRNHYD0122L014:~/documents$ mkdir hanuman
+shubham@BRNHYD0122L014:~/documents$ ls
+buddha  foo.txt  hanuman  krishna  lord  ram
+
+---------------------------------------------------------------------
+	#Copy file command "cp <file_to_copy> <new_name_to_file>" in same folder
+shubham@BRNHYD0122L014:~/documents$ cp foo.txt test.txt
+------------------------------------------------------------------------------
+	#check the file is present or not using "ls" command
+shubham@BRNHYD0122L014:~/documents$ ls
+buddha  foo.txt  hanuman  krishna  lord  ram  test.txt
+-----------------------------------------------------------------
+shubham@BRNHYD0122L014:~/documents$ cat test.txt
+
+,
+ls
+
+
+
+shubham is bad boy and hulkat kutra sala
+
+------------------------------------------------------------------------
+	#Remove the file
+shubham@BRNHYD0122L014:~/documents$ rm test.txt
+---------------------------------------
+shubham@BRNHYD0122L014:~/documents$ ls
+buddha  foo.txt  hanuman  krishna  lord  ram
+
+-----------------------------------------------------------------------------
+	#Copy file into other loacation or folder
+shubham@BRNHYD0122L014:~/documents$ cp foo.txt /home/shubham/desktop
+shubham@BRNHYD0122L014:~/documents$ cd ..
+shubham@BRNHYD0122L014:~$ ls
+desktop  documents  downloads
+shubham@BRNHYD0122L014:~$ cd desktop
+shubham@BRNHYD0122L014:~/desktop$ ls
+foo.txt
+shubham@BRNHYD0122L014:~/desktop$ cat foo.txt
+
+,
+ls
+
+
+
+shubham is bad boy and hulkat kutra sala
+
+----------------------------------------------------------------------------------
+	#Make directory ues "mkdir" and Remove directory use "rmdir"
+shubham@BRNHYD0122L014:~$ ls
+desktop  documents  testfolder
+shubham@BRNHYD0122L014:~$ mkdir test
+shubham@BRNHYD0122L014:~$ rmdir test
+shubham@BRNHYD0122L014:~$ mkdir test
+shubham@BRNHYD0122L014:~$ ls
+desktop  documents  test  testfolder
+
+--------------------------------------------------
+	#Remove the non-empty directory for folder use "rm -r <directory_name>".
+shubham@BRNHYD0122L014:~$ ls
+desktop  documents  test  testfolder
+shubham@BRNHYD0122L014:~$ rmdir test
+rmdir: failed to remove 'test': Directory not empty
+shubham@BRNHYD0122L014:~$ rm -r test
+shubham@BRNHYD0122L014:~$ ls
+desktop  documents  testfolder
+
+--------------------------------------------------------------------------------------
+	# Get information about commands use in linux use "man <command_to_describe>"
+shubham@BRNHYD0122L014:~$ man
+What manual page do you want?
+For example, try 'man man'.
+shubham@BRNHYD0122L014:~$ man ls
+shubham@BRNHYD0122L014:~$ man cd
+No manual entry for cd
+shubham@BRNHYD0122L014:~$ man cp
+shubham@BRNHYD0122L014:~$
+
+------------------------------------------------------------------------------------------s

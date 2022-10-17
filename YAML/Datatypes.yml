@@ -1,0 +1,59 @@
+# Strings Variables
+name: Shubham Sirsat
+orther: "like this way"
+job: 'awe'
+
+
+bio: |
+hey my name is shubham.
+i am from akola maharashtra.
+
+#write single line as a multiple line.
+message: >
+this is message from god.
+who lives on Heven.
+we don't know.
+
+#data types support in yaml
+Rollno: 1254
+MarksObtaines: 88.64
+BooleanValues: No
+#for boolean 
+# True --> true,True,TRUE,y,Y
+# False--> false,False,FLASE,N,n
+
+# Specify the type
+zero: !!int 0
+positiveNUM: !!int 45
+negativeNUM: !!int -45
+bineryNUM: !!int 0b10011
+ocatanum: !!int 04545
+hexa: !!int 0x6565
+commavalue: !!int 54_600 # 54,600
+exponential: 12.254E10
+
+
+# floating points number
+marks: !!float 86.25
+infinity: !!float .inf
+not a numb: .nan 
+
+# Boolean values
+bool: !!bool No
+bool2: !!bool Yes
+etc
+
+# Strings 
+message: !!str This is message form python runner 3.10.
+
+# Null
+name : !!null Null
+#or null = ~
+~: this is a null key
+
+# Date and Time
+date: !!timestamp 2012-09-25
+India time: 2022-12-12T02:56:43.10 + 5:30
+no time zone: 2022-12-12T02:56:43.10
+
+

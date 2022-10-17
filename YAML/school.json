@@ -1,0 +1,15 @@
+{
+    "School":[
+        {
+        "name":"KTDV",
+        "Principal":"Davale",
+        "Students":[
+            {
+                "student_name":"shubham",
+                "rollno": 54,
+                "marks":88
+            }
+        ]
+        }
+    ]
+}
