@@ -1,0 +1,45 @@
+###################
+Download .war file to install the jenkins from official websites.
+----->  https://www.jenkins.io/download/
+================================================================
+# Make sure you have java install in your local system
+JAVA 1.8 or above
+
+==================================================================
+Open commad line and run 
+
+-> java -jar "Address of local .war file that we have download/jenkins.war"
+
+Save Password
+===============================================================
+User ---> admin
+password --> admin
+
+==============================================================
+net start jenkins
+net stop jenkins
+
+===========================================================
+Command line of Jenkins
+
+java -jar jenkins.war --httpPort=9090
+
+#####################################
+Step:3
+Jenkins CLI
+You can access various features in Jenkins through a command-line tool.
+ See the documentation for more details of this feature. To get started, 
+ download jenkins-cli.jar, and run it as follows:
+
+java -jar jenkins-cli.jar -s http://localhost/ -webSocket help
+
+###
+Step:4
+Download jenkins-cli.jar file and save in one folder.
+
+# Step:5
+Open CMD in same folder and run following commands
+java -jar jenkins-cli.jar -s http://localhost:80/ -webSocket help
+
+java -jar jenkins-cli.jar -s http://localhost:80/ -webSocket safe-restart
+

@@ -1,12 +1,22 @@
-apiVersion: v1
-kind: Pod
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: Demo-pod
-  labels:
-    name: demo-pod
+  name: testmyapp
 spec:
-  containers:
-    - name: Demo-container
-      image: ngnix
+  selector:
+    matchLabels:
+      app: flaskapp
+  replicas: 2 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: flaskapp
+    spec:
+      containers:
+      - name: mywebsite
+        image: my_first_image
+        ports:
+        - containerPort: 80
+        
 
 
