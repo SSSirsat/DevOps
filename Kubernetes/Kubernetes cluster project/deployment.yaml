@@ -1,22 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: testmyapp
+  name: python-webapp
+  labels:
+    app: app
 spec:
+  replicas: 2
   selector:
     matchLabels:
-      app: flaskapp
-  replicas: 2 # tells deployment to run 2 pods matching the template
+      app: web
   template:
     metadata:
       labels:
-        app: flaskapp
+        app: web
     spec:
       containers:
-      - name: mywebsite
-        image: my_first_image
+      - name: webapp
+        image: webapp:1.0
         ports:
-        - containerPort: 80
-        
+        - containerPort: 5000
 
 

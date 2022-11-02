@@ -4,15 +4,14 @@ import os
 
 app = Flask(__name__)
 
-hostname=socket.gethostname()   
-IPAddr=socket.gethostbyname(hostname) 
-
 @app.route("/")
 def user():
     return render_template("index.html")
 
-@app.route("/login")
+@app.route("/about")
 def ipfind():
+    hostname = socket.gethostname()
+    IPAddr = socket.gethostbyname(hostname)
     return render_template("about.html", IP=IPAddr, HNAME=hostname)
 
 if __name__ == '__main__':
