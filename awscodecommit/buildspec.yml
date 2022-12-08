@@ -1,0 +1,24 @@
+version: 0.2
+phases:
+  install:
+    runtime_version:
+      python: 3.10
+  pre_build:
+    commands:
+      - pip install -r requirement.txt
+#      - python app.py
+  build:
+    commands:
+      - python app.py
+
+  post_build:
+    commands:
+      - aws s3 sync . S3://bucket-name/key-name --acl public-read
+
+
+#artifacts:
+#  files:
+#    - target/my-app-1.0-SNAPSHOT.jar
+#    - appspec.yml
+#  discard-paths: yes
+

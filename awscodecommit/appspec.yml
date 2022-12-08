@@ -1,0 +1,6 @@
+version: 0.0
+os: linux
+files:
+  - source: ./my-app-1.0-SNAPSHOT.jar
+    destination: /tmp
+
