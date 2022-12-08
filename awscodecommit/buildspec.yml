@@ -13,7 +13,7 @@ phases:
 
   post_build:
     commands:
-      - aws s3 sync . S3://bucket-name/key-name --acl public-read
+      - aws s3 sync . S3://codebuildartifactgopal/my-app-1.0-SNAPSHOT.jar --acl public-read
 
 
 #artifacts:
