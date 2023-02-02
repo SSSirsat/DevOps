@@ -1,12 +1,12 @@
 from flask import Flask, render_template
-# from flask_mysqldb import MySQL
+from flask_mysqldb import MySQL
 
 app = Flask(__name__)
 
 app.config["MYSQL_HOST"]= 'localhost'
 app.config["MYSQL_USER"]= 'root'
 app.config["MYSQL_PASSWORD"]= 'root'
-app.config["MYSQL_DB"]= 'shuubham1'
+app.config["MYSQL_DB"]= 'PERSONS'
 
 from flaskext.mysql import MySQL
 mysql = MySQL()
@@ -15,8 +15,11 @@ cursor = mysql.get_db().cursor()
 
 @app.route("/")
 def user():
-    fname="Shubham"
-    lname="Sirsat"
+    PERSONID= '04'
+    CITY= "DELHI"
+    fname="ABHISHAKE"
+    lname="MISHARA"
+    mysql.connect()
     cur = mysql.connection.curser()
     cur.execute("INSERT INTO user(id, Name) VALUES(%s %s)", (fname,lname))
     mysql.connection.commit()

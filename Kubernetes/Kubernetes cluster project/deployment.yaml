@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: python-webapp
+  name: my-website
   labels:
-    app: app
+    app: web
 spec:
   replicas: 3
   selector:
@@ -16,7 +16,8 @@ spec:
     spec:
       containers:
       - name: webapp
-        image: webapp:1.0
+#        image: webapp:1.0
+        image: images6-01-23
         ports:
         - containerPort: 5000
 
